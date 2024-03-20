@@ -33,4 +33,5 @@ describe(`Elements on the home page`, ()=> {
       cy.get('.SelectButton.Link.Link--primary.u-h8')
       .should('be.visible')
     })
+    //
 })
