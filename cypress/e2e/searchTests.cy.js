@@ -1,8 +1,10 @@
 import HomePage from "../support/pageObjects/homePage";
+import SearchResultPage from "../support/pageObjects/searchResultPage";
 
 
 describe('Search teasts', () => {
     const homePage = new HomePage();
+    const searchResultPage = new SearchResultPage();
 
     it('search buttin displayed', () => {
         homePage.visitHomePage();
@@ -22,5 +24,16 @@ describe('Search teasts', () => {
         homePage.getSearchBar()
             .click()
             .type("banana");
+    })
+
+    it('search bar functional', () => {
+        homePage.visitHomePage();
+
+        cy.viewport(1280, 800);
+
+        searchResultPage.searchByName(homePage, 'Lock')
+
+        cy.get(searchResultPage.fierstResultOfSearch)
+            .contains('lock')
     })
 })

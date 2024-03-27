@@ -130,6 +130,4 @@ describe(`Elements on the home page`, () => {
     homePage.clickLinkInActiveItem('Collections');
     cy.url().should('eq', 'https://theconnectedshop.com/pages/products'); 
   });*/
-
-
 })

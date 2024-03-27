@@ -20,6 +20,8 @@ class HomePage{
         this.contactButton = '.placeholder'
         this.callButton = '.placeholder'
 
+
+
     }
      
     clickLinkInActiveItem(linkText) {
