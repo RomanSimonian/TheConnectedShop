@@ -7,6 +7,9 @@ class HomePage{
         this.currencyDropDownButton = '.SelectButton'
         this.hurizenItem = 'li.HorizontalList__Item';
         this.u_h6Element = 'a.Heading.u-h6';
+        this.searchButton = 'a[href="/search"]';
+        this.searchBarHeader = 'div[id=\'Search\']';
+        this.searchBar = 'input[class=\'Search__Input Heading\']';
         this.collectionsButton = '.placeholder'
         this.newInButton = '.placeholder'
         this.homeButton = '.placeholder'
@@ -16,6 +19,7 @@ class HomePage{
         this.aboutUsButton = '.placeholder'
         this.contactButton = '.placeholder'
         this.callButton = '.placeholder'
+
     }
      
     clickLinkInActiveItem(linkText) {
@@ -94,6 +98,19 @@ class HomePage{
         cy.get(this.hurizenItem)
             .contains(this.u_h6Element, 'Contact')
             .click();
+    }
+
+    getSearchButton(){
+        return cy.get(this.searchButton)
+            .first();
+    }
+
+    getSearchBar(){
+        cy.get(this.searchButton)
+            .first()
+            .click();
+
+        return cy.get(this.searchBar);
     }
 }
 export default HomePage;
