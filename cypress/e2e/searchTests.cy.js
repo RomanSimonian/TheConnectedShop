@@ -2,11 +2,11 @@ import HomePage from "../support/pageObjects/homePage";
 import SearchResultPage from "../support/pageObjects/searchResultPage";
 
 
-describe('Search teasts', () => {
+describe('Search tests', () => {
     const homePage = new HomePage();
     const searchResultPage = new SearchResultPage();
 
-    it('search buttin displayed', () => {
+    it('search button displayed', () => {
         homePage.visitHomePage();
 
         cy.viewport(1280, 800);
