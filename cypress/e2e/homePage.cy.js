@@ -3,7 +3,6 @@ describe(`Elements on the home page`, ()=> {
         cy.visit("https://theconnectedshop.com/");
         cy.title().should(`eq`, `The Connected Shop - Smart Locks, Smart Sensors, Smart Home & Office`);
     })
-    
     it(`Home page should contain logo`, ()=> {
         cy.visit(`https://theconnectedshop.com/`);
         //cy.get(`.Header__LogoImage--primary`).should('be');
@@ -13,7 +12,6 @@ describe(`Elements on the home page`, ()=> {
        /* cy.get('img.Header__LogoImage--primary')
       .should('be.visible')
       .and(($img) => {
-       
         const logoWidth = Cypress.$($img).width();
         expect(logoWidth).to.be.greaterThan(0);
       });*/
@@ -22,7 +20,7 @@ describe(`Elements on the home page`, ()=> {
       .should('be.visible')
       .and(($img) => {
 
-        const logoWidth = Cypress.$($img).width();  
+        const logoWidth = Cypress.$($img).width();
         expect(logoWidth).to.be.greaterThan(0);
       });
     })

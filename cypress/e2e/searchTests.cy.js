@@ -26,7 +26,7 @@ describe('Search tests', () => {
             .type("banana");
     })
 
-    it('search bar functional', () => {
+    it.only('search bar functional', () => {
         homePage.visitHomePage();
 
         cy.viewport(1280, 800);
