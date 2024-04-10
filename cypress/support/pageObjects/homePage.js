@@ -10,20 +10,9 @@ class HomePage{
         this.searchButton = 'a[href="/search"]';
         this.searchBarHeader = 'div[id=\'Search\']';
         this.searchBar = 'input[class=\'Search__Input Heading\']';
-        this.collectionsButton = '.placeholder'
-        this.newInButton = '.placeholder'
         this.homeButton = '.placeholder'
-        this.personalButton = '.placeholder'
-        this.businessesButton = '.placeholder'
-        this.techTalkButton = '.placeholder'
-        this.aboutUsButton = '.placeholder'
-        this.contactButton = '.placeholder'
-        this.callButton = '.placeholder'
-
-
-
     }
-     
+
     clickLinkInActiveItem(linkText) {
         cy.get('HorizontalList__Item is-active').within(() => {
             cy.contains('a.Heading.u-h6', linkText).click();
