@@ -13,12 +13,6 @@ class HomePage{
         this.homeButton = '.placeholder'
     }
 
-    clickLinkInActiveItem(linkText) {
-        cy.get('HorizontalList__Item is-active').within(() => {
-            cy.contains('a.Heading.u-h6', linkText).click();
-        });
-    }
-
     visitHomePage(){
         cy.visit(this.url)
         cy.document().should('have.property', 'readyState', 'complete');
