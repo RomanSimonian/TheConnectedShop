@@ -19,9 +19,9 @@ viewPorts.forEach((view) => {
     const contactPage = new ContactPage();
 
     beforeEach( async () => {
-      cy.clearCookies();
-      cy.viewport(view.width, view.height);
+      await cy.clearCookies();
       homePage.visitHomePage();
+      cy.viewport(view.width, view.height);
     });
 
     it('Home page should contain logo', () => {

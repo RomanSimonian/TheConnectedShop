@@ -5,7 +5,7 @@ viewPorts.forEach((view) => {
         const loginPage = new LogInPage();
 
         beforeEach( async () => {
-            cy.clearCookies();
+            await cy.clearCookies();
             cy.viewport(view.width, view.height);
         });
 

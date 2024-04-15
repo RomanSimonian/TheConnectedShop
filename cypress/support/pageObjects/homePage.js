@@ -1,7 +1,7 @@
 class HomePage{
 
     constructor(){
-        this.url = 'https://theconnectedshop.com/';
+        this.theConnectedShopURL = 'https://theconnectedshop.com/';
         this.logo = 'img.Header__LogoImage--transparent';
         this.expectedTitle = `The Connected Shop - Smart Locks, Smart Sensors, Smart Home & Office`
         this.currencyDropDownButton = '.SelectButton'
@@ -14,7 +14,7 @@ class HomePage{
     }
 
     visitHomePage(){
-        cy.visit(this.url)
+        cy.visit(this.theConnectedShopURL)
         cy.document().should('have.property', 'readyState', 'complete');
     }
 
