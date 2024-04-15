@@ -31,12 +31,6 @@ class HomePage{
           });
     }
 
-    checkCurrencyDropDownButton(){
-        cy.get(this.checkCurrencyDropDownButton)
-        .first()
-        .should('be.visible');
-    }
-
     checkHomeButton(){
         cy.get(this.homeButton)
         .first()

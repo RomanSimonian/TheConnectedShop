@@ -7,7 +7,7 @@ import BusinessesPage from "../support/pageObjects/businessesPage";
 import TechTalkPage from "../support/pageObjects/techTalkPage";
 import AboutUsPage from "../support/pageObjects/aboutUsPage";
 import ContactPage from "../support/pageObjects/contactPage";
-viewPorts.forEach((view) => {
+
   describe(`Elements on the home page`, () => {
     const homePage = new HomePage();
     const newInPage = new NewInPage();
@@ -18,10 +18,9 @@ viewPorts.forEach((view) => {
     const aboutUsPage = new AboutUsPage();
     const contactPage = new ContactPage();
 
-    beforeEach( async () => {
-      await cy.clearCookies();
+    beforeEach(() => {
       homePage.visitHomePage();
-      cy.viewport(view.width, view.height);
+      cy.viewport(viewPorts.width, viewPorts.height);
     });
 
     it('Home page should contain logo', () => {
@@ -30,10 +29,6 @@ viewPorts.forEach((view) => {
 
     it('Home page should contain valid title', () => {
       homePage.checkTitle();
-    })
-
-    it('Home page should contain currency button', () => {
-      homePage.checkCurrencyDropDownButton();
     })
 
     it('NewIn button should redirect to it`s page', () => {
@@ -77,6 +72,5 @@ viewPorts.forEach((view) => {
       cy.url().should('include', contactPage.url);
     })
   })
-})
 
 

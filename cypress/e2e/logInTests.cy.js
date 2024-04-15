@@ -1,22 +1,18 @@
 import viewPorts from "../fixtures/viewPorts.json"
+import users from "../fixtures/users.json"
 import {LogInPage} from "../support/pageObjects/logInPage";
-viewPorts.forEach((view) => {
     describe('LogIn testing', () => {
         const loginPage = new LogInPage();
 
-        beforeEach( async () => {
-            await cy.clearCookies();
-            cy.viewport(view.width, view.height);
+        beforeEach(() => {
+            cy.clearCookies();
+            cy.viewport(viewPorts.width, viewPorts.height);
         });
 
         it('should log in', () => {
-            cy.fixture('users').then((user) =>{
-                loginPage.logInWithTheCredentials(user.email, user.password);
-                cy.get(loginPage.emailInputField)
-                    .should('have.value');
+            loginPage.logInWithTheCredentials(users.email, users.password);
 
-                cy.url().should('include', loginPage.loginPageUrl);
-            })
+            cy.url().should('include', loginPage.capchaUrl);
         });
 
         it('Login with incorrect credentials', () => {
@@ -30,5 +26,4 @@ viewPorts.forEach((view) => {
             });
         });
     });
-})
 

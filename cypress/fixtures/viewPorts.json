@@ -1,7 +1,5 @@
-[
-    {
-      "type": "desktop",
-      "width": 2560,
-      "height": 1600
-    }
-  ]
+{
+  "type": "desktop",
+  "width": 2560,
+  "height": 1600
+}
