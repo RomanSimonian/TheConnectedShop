@@ -6,7 +6,6 @@ viewports.forEach((view) => {
     describe('Search tests', () => {
         const homePage = new HomePage();
         const searchResultPage = new SearchResultPage();
-        const param = [1280, 800];
 
         beforeEach( async () => {
             await cy.clearCookies();
