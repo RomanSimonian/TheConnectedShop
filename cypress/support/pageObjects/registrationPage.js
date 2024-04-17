@@ -14,7 +14,13 @@ export class RegistrationPage{
         cy.visit(this.registrationPageUrl);
         cy.document().should('have.property', 'readyState', 'complete');
         cy.get(this.firstNameInputField)
-           .type(userModel.name);
+            .should('have.attr', 'type', 'text')
+            .should('have.attr', 'class', 'Form__Input')
+            .should('be.visible');
+        cy.get(this.firstNameInputField)
+            .type(userModel.name);
+        cy.get(this.firstNameInputField)
+            .should('have.value', userModel.name);
         cy.get(this.lastNameInputField)
            .type(userModel.lastName);
         cy.get(this.emailNameInputField)

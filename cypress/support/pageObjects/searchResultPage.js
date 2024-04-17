@@ -1,4 +1,4 @@
-class SearchResultPage {
+export class SearchResultPage {
     constructor() {
         this.fierstResultOfSearch = 'h2[class = \'ProductItem__Title Heading\']'
     }
@@ -11,4 +11,3 @@ class SearchResultPage {
         cy.document().should('have.property', 'readyState', 'complete');
     }
 }
-export default SearchResultPage;
