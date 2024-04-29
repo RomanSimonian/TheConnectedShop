@@ -1,6 +1,7 @@
 import viewPorts from "../fixtures/viewPorts.json"
 import users from "../fixtures/users.json"
 import {LogInPage} from "../support/pageObjects/logInPage";
+import 'cypress-mochawesome-reporter/register';
     describe('LogIn testing', () => {
         const loginPage = new LogInPage();
 
